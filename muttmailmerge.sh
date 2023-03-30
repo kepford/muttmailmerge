@@ -4,10 +4,9 @@
 # How to use this script:
 #
 # 1. Create a list of email addresses.
-# 2. Create a file with your email message
-# 3. Add the script to your path or call it directly
-# 4. Answer the questions and your email will be sent to all the addresses in
-#    your email file
+# 2. Create a file with your email message.
+# 3. Add the script to your path or call it directly.
+# 4. Answer the questions and your email will be sent to all the addresses in your email file.
 #
 # This script basically loops through a list of email addresses and runs a
 # command like this
