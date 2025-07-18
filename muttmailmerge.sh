@@ -39,6 +39,7 @@ echo
 echo "Subject: $SUBJECT"
 echo "Message:"
 echo $(cat $MESSAGE)
+echo
 echo "Using muttrc file: $MUTTRC"
 echo
 echo "These email addresses will be emailed:"
@@ -50,7 +51,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   for EMAIL in $EMAILS
   do
-    neomutt -s "$SUBJECT" $EMAIL -F $MUTTRC < $MESSAGE
+    neomutt -n -e "source '$MUTTRC'" -d 2 -s "Test" -- "$EMAIL" < "$MESSAGE"
     echo "Sent email to: $EMAIL" "using muttrc file: $MUTTRC"
   done
 fi
