@@ -51,7 +51,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   for EMAIL in $EMAILS
   do
-    neomutt -n -e "source '$MUTTRC'" -d 2 -s "Test" -- "$EMAIL" < "$MESSAGE"
+    neomutt -n -e "source '$MUTTRC'" -d 2 -s "$SUBJECT" -- "$EMAIL" < "$MESSAGE"
     echo "Sent email to: $EMAIL" "using muttrc file: $MUTTRC"
   done
 fi
